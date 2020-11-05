@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Sans-Serif";
+  src: url("Exo 2") (format="truetype");
+}
+
+body {
+  font: 13pt "Exo 2", Sans-Serif;
+  display: flex;
+}
+
+h3 {
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-left: 5px;
+  border: 5px solid #06060b;
+  width: 325px;
+  border-radius: 10px;
+  background-color: #f5b82a;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+  border: 5px solid #000000;
+  margin: 20px;
+  margin-top: -10px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+}
+
+ul {
+  margin-left: -25px;
+  margin-top: -10px;
+}
+
+li {
+  list-style: none;
+  border: 4px solid #1E1E21;
+  padding: 3px;
+  padding-top: 7px;
+  float: left;
+  font-size: 10pt;
+  border-radius: 10px;
+  width: 305px;
+  margin: 1px;
+  margin-top: 22px;
+  margin-bottom: -19px;
+  margin-left: -3px;
+  background-color: #4a5d7d;
+}
+
+span {
+  font-weight: bold;
+  border: 2px #06060b;
+  border-style: inset;
+  padding-left: 5px;
+  display: flex;
+  float: left;
+  width: 120px;
+  height: 20px;
+  border-radius: 5px;
+  font-size: 11pt;
+  margin-right: 5px;
+  margin-top: -4px;
+}
+
+.card {
+  width: 350px;
+  height: 627px;
+  border: 7px solid #06060b;
+  background-color: #0d1f1c;
+  border-radius: 20px;
+}
+
+.emphasis {
+  border: 5px solid #06060b;
+  font-size: 7.2pt;
+  text-shadow: 1px;
+  display: flex;
+  border-radius: 22px;
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: #173363;
+  color: #bdc7de;
+}
+
+.details {
+  border: 5px solid #06060b;
+  text-indent: 1em;
+  padding: 5px;
+  padding-top: 170px;
+  padding-bottom: 15px;
+  margin: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: -2px;
+  border-radius: 16px;
+  font-size: 9pt;
+  background-color: #90722b;
+}
+
+.copyright {
+  margin-top: -6px;
+  margin-right: 30px;
+  margin-bottom: -3px;
+  font-size: 6pt;
+  color: #bdc7de;
+  float: right;
+}
+
+.notes {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 343px;
+  height: 347px;
+  margin-left: 2px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
