@@ -1,2 +1,2 @@
 # japankid-code.github.io
-japankid's code site
+japankid's code site :)
