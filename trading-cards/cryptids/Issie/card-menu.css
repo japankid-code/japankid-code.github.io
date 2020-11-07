@@ -1,0 +1,13 @@
+.card-menu {
+  position:relative;
+  width: 370px;
+  height: 700px;
+}
+
+.cardmenu div figure div a {
+
+}
+
+.card-menu:hover {
+  right: 0px;
+}
