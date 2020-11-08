@@ -1,13 +1,3 @@
-@font-face {
-  font-family: "Sans-Serif";
-  src: url("Exo 2") (format="truetype");
-}
-
-body {
-  font: 13pt "Exo 2", Sans-Serif;
-  display: flex;
-}
-
 h3 {
   margin-left: 5px;
   margin-top: 5px;
