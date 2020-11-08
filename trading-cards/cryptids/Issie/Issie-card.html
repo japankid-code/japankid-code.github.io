@@ -4,20 +4,27 @@
 	<meta charset="utf-8">
 	<title>Issie Trading Card</title>
 	<link rel="stylesheet" href="card-styles.css">
-	<link rel="stylesheet" href="image-hover-menu.css">
+	<link rel="stylesheet" href="bamboozler.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-	<div>
+
+<h2>What Can JavaScript Do?</h2>
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>クリック</button>
+
+
+<figure>
 		<div class="card">
 			<!-- your favorite animal's name goes here -->
 			<h3>イッシー, Issie</h3>
 			<!-- your favorite animal's image goes here -->
 			<figure class="image-hover-menu">
-				<img src="issie_sign.jpg" alt="Issie, the Japanese nessie" />
+				<img src="issie_sign.jpg" alt="Issie, the Japanese nessie">
 				<div>
 					<a href="https://japankid-code.github.io/">bamboozled</a>
 				</div>
+			</img>
 			</figure>
 			<div class="notes">
 				<!-- your favorite animal's interesting fact goes here -->
@@ -41,7 +48,6 @@
 				©2020 japankid
 			</div>
 		</div>
-	</div>
-</body>
+</figure>
 
 </html>

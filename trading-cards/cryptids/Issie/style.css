@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Sans-Serif";
+  src: url("Exo 2") (format="truetype");
+}
+
+html {
+  font: 13pt "Exo 2", Sans-Serif;
+}
+
+button .button {
+  width: 120px
+  height: 20px;
+}
