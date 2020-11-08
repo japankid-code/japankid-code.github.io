@@ -1,13 +1,43 @@
+/* not working atm */
+
 .card-menu {
   position:relative;
   width: 370px;
   height: 700px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 0px solid black;
 }
 
-.cardmenu div figure div a {
+.card-menu * {
+  box-sizing: none;
+}
 
+.card-menu div a {
+  display: block;
+  line-height: 0;
+  color: #fff;
+  text-decoration: none;
+  writing-mode: vertical-lr;
+  opacity: 0.8;
+  padding: 5px 15px;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+.cardmenu div {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 100px;
+  height: 100%;
+  backgorund: #000000;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-menu:hover {
-  right: 0px;
+  right: -30px;
 }
