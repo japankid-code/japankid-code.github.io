@@ -1,0 +1,72 @@
+/* Use a figure to wrap the img element and a div element which contains the menu links. */
+
+.image-hover-menu {
+  position:relative;
+  margin: 0px;
+  text-align: center;
+  box-sizing: content-box;
+  border: 0px solid black;
+}
+
+.image-hover-menu * {
+  box-sizing: content-box;
+}
+
+
+
+.image-hover-menu img {
+  position: relative;
+  max-width: 100%;
+  top: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.image-hover-menu img a {
+  transition: 0.3s ease-in-out;
+}
+
+/* this selector changes text inside the popup altering its position/alignment
+(what shows in the webpage is div text contained in the anchor element) */
+.image-hover-menu div {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* this changes the text orientation in the hover menu and its final position */
+.image-hover-menu div a {
+  display: block;
+  line-height: 0;
+  color: #fff;
+  text-decoration: none;
+  writing-mode: vertical-lr;
+  opacity: 0.8;
+  padding: 5px 18px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.image-hover-menu div a:hover {
+  text-decoration: underline;
+  writing-mode: vertical-lr;
+}
+
+
+/* Use the opacity and right attributes to animate the image on hover, to create a sliding effect. */
+.image-hover-menu:hover img {
+  opacity: 0.8;
+  right: -12px;
+  transition: 0.2s ease-in-out;
+}
+
+.image-hover-menu:hover div {
+  left: 0;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
