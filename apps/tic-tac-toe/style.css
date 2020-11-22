@@ -1,5 +1,11 @@
-  
-.ttt_board {
+span.pond {
+  background-color: #0c2027;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ttt_buttonspace {
   width: 300px;
   height: 300px;
   border: 5px solid #12313b;
@@ -11,19 +17,16 @@
   flex-flow: row wrap;
 }
 
-#ttt_buttons {
-  width: 80px;
-  height: 80px;
-  margin: 0px;
-  background-color: #43a047;
-  border: 4px solid #288a2b;
+#ttt_button {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  background-color: #288a2b;
+  border: 4px solid #43a047;
   border-radius: 40px;
+  outline: none;
 }
 
-p {
-  display: block;
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+#ttt_buttons:focus{
+  outline: none;   
 }
