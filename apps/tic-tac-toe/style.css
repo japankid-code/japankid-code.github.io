@@ -1,8 +1,13 @@
-span.pond {
+html {
+  height: 100%;
+}
+
+body {
   background-color: #0c2027;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .ttt_buttonspace {
@@ -24,9 +29,12 @@ span.pond {
   background-color: #288a2b;
   border: 4px solid #43a047;
   border-radius: 40px;
-  outline: none;
 }
 
 #ttt_buttons:focus{
   outline: none;   
+}
+
+img {
+  padding-top: 4px;
 }
