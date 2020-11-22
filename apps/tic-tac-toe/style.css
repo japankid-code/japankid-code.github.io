@@ -7,14 +7,23 @@
   background-color: #1f5768;
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
-  flex-wrap: wrap;
+  align-content: space-around;
+  flex-flow: row wrap;
 }
 
 #ttt_buttons {
   width: 80px;
   height: 80px;
+  margin: 0px;
   background-color: #43a047;
   border: 4px solid #288a2b;
   border-radius: 40px;
+}
+
+p {
+  display: block;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
