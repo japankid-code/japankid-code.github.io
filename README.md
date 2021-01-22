@@ -1,8 +1,8 @@
 # japankid-code.github.io
-japankid's code site :)
-=======================
-APPS
-----
+# japankid's code site :)
+
+## APPS
+
 
 [trading cards](https://japankid-code.github.io/trading-cards/cryptids/Issie/Issie-card.html)
 
