@@ -1,12 +1,11 @@
 body {
-    color: #dfd9d7;
+    color: #bbbcbc;
     text-align: center;
     font-family: Exo;
-    background-color: rgb(18, 26, 26);
+    background-color: #272425;
 }
 
 h1 {
-    
     font-size: 70px;
     margin: 0.2em;
 }
