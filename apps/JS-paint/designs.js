@@ -20,7 +20,7 @@ function makeGrid(rows, cols) {
         var row = table.insertRow(r);
         for (c=0; c<cols; c++) {
         	var cell = row.insertCell(c);
-            cell.addEventListener("click", e => {
+            cell.addEventListener("mouseover", e => {
                 e.target.style.background = colorPicker.value;
             });
         };
