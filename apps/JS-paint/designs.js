@@ -19,10 +19,15 @@ function makeGrid(rows, cols) {
     for (r=0; r<rows; r++) {
         var row = table.insertRow(r);
         for (c=0; c<cols; c++) {
-        	var cell = row.insertCell(c);
-            cell.addEventListener("mouseover", e => {
-                e.target.style.background = colorPicker.value;
-            });
+            var cell = row.insertCell(c);
+            var mouseIsDown = false
+            cell.addEventListener('mousedown', function(){mouseIsDown = true})
+            cell.addEventListener('mouseup', function(){mouseIsDown = false})
+            cell.addEventListener('mousemove', e => {
+                if (mouseIsDown){
+                    e.target.style.background = colorPicker.value;
+                }
+            })
         };
     };
 };
