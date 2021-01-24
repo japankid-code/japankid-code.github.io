@@ -32,4 +32,4 @@ function makeGrid(rows, cols) {
     };
 };
 
-makeGrid(20, 20);
+makeGrid(200, 100);
