@@ -8,4 +8,4 @@
 
 [tic tac toe](https://japankid-code.github.io/apps/tic-tac-toe/tic-tac-toe.html)
 
-[JS paint](https://japankid-code.github.io/apps/JS-paint/index.html)
+[JS paint](https://japankid-code.github.io/apps/JS-paint/1.0/index.html)
