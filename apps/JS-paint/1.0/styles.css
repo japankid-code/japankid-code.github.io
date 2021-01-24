@@ -36,9 +36,9 @@ tr {
 }
 
 td {
-    height: 10px;
-    width: 10px;
-    border: 1px solid black;
+    height: 1px;
+    width: 1px;
+    border: 0px solid black;
 }
 
 input[type=number] {
