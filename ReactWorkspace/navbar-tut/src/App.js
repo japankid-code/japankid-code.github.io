@@ -11,6 +11,12 @@ function App() {
     <React.Fragment>
       <Router>
         <NavigationBar />
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route component={NoMatch} />
+        </Switch>
       </Router>
     </React.Fragment>
   );
