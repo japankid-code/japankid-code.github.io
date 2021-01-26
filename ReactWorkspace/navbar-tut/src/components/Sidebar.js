@@ -17,7 +17,7 @@ const StyledSideNav = styled.div`
 class SideNav extends React.Component {
     render() {
         return(
-           
+          <StyledSideNav></StyledSideNav>
         )
     }
 }
