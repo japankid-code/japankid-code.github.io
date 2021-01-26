@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import from "styled-components";
+import styled from "styled-components";
 
 /* This defines the actual bar going down the screen */
 const StyledSideNav = styled.div`
