@@ -13,13 +13,33 @@ const StyledSideNav = styled.div`
   padding-top: 10px;
 `;
 
+const NavIcon = styled.div `
+
+`;
 
 class SideNav extends React.Component {
     render() {
-        return(
-          <StyledSideNav></StyledSideNav>
-        )
+      return(
+        <StyledSideNav></StyledSideNav>
+      )
     }
+}
+
+class NavItem extends React.Component {
+  handleClick = () => {
+    const { path, onClick } = this.props;
+    onItemClick(path);
+  }
+  render() {
+    const { active } = this.props;
+    return(
+      <StyledNavItem active={active}>
+        <Link to={this.props.path} className={this.props.css} onClick={this.handleClick}>
+          <NavIcon></NavIcon>
+        </Link>
+      </StyledNavItem>
+    )
+  }
 }
 
 export default class Sidebar extends React.Component {
