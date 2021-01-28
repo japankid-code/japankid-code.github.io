@@ -24,7 +24,7 @@ const StyledNavItem = styled.div`
   margin-bottom: 0;   /* Puts space between NavItems */
   a {
     font-size: 2.7em;
-    color: ${(props) => props.active ? "white" : "#9FFFCB"};
+    color: ${(props) => props.active ? "white" : "#9FFFCB"}; /* using the active prop, decide which colors to use.*/
     :hover {
       opacity: 0.7;
       text-decoration: none; /* Gets rid of underlining of icons */
@@ -33,11 +33,38 @@ const StyledNavItem = styled.div`
 `;
 
 class SideNav extends React.Component {
-    render() {
-      return(
-        <StyledSideNav></StyledSideNav>
-      )
-    }
+  constructor(props) {
+    super(props) 
+    this.state = {
+      activePath: '/',
+      items: [
+        {
+          path: '/', /* path is used as id to check which NavItem is active basically */
+          name: 'Home',
+          css: 'fa fa-fw fa-home',
+          key: 1 /* Key is required, else console throws error. Does this please you Mr. Browser?! */
+        },
+        {
+          path: '/about',
+          name: 'About',
+          css: 'fa fa-fw fa-clock',
+          key: 2
+        },
+        {
+          path: '/NoMatch',
+          name: 'NoMatch',
+          css: 'fas fa-hashtag',
+          key: 3
+        },
+      ]
+    }  
+  }
+  }
+  render() {
+    return(
+      <StyledSideNav></StyledSideNav>
+    )
+  }
 }
 
 class NavItem extends React.Component {
