@@ -59,10 +59,30 @@ class SideNav extends React.Component {
       ]
     }  
   }
+
+  onItemClick = (path) => {
+    this.setState({ active: path });
   }
+
   render() {
+    const { items, activePath } = this.state;
     return(
-      <StyledSideNav></StyledSideNav>
+      <StyledSideNav>
+        {
+          items.map((item) => { /* loops thru the items in the list making sure each one has these properties */
+            return(
+              <NavItem
+                  path={item.path}
+                  name={item.name}
+                  css={item.css}
+                  onClick={this.onItemClick}
+                  active={item.path === activePath}
+                  key={item.key}
+              />
+            );
+          }) 
+        };
+      </StyledSideNav>
     )
   }
 }
