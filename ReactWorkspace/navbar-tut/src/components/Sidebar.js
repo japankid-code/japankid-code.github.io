@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 /* This defines the actual bar going down the screen */
@@ -33,7 +34,7 @@ const StyledNavItem = styled.div`
 `;
 
 class SideNav extends React.Component {
-  constructor(props) {
+  constructor(props) { 
     super(props) 
     this.state = {
       activePath: '/',
@@ -42,7 +43,7 @@ class SideNav extends React.Component {
           path: '/', /* path is used as id to check which NavItem is active basically */
           name: 'Home',
           css: 'fa fa-fw fa-home',
-          key: 1 /* Key is required, else console throws error. Does this please you Mr. Browser?! */
+          key: 1 /* Key is required, else console throws error*/
         },
         {
           path: '/about',
@@ -61,7 +62,7 @@ class SideNav extends React.Component {
   }
 
   onItemClick = (path) => {
-    this.setState({ active: path });
+    this.setState({ activePath: path });
   }
 
   render() {
@@ -69,7 +70,7 @@ class SideNav extends React.Component {
     return(
       <StyledSideNav>
         {
-          items.map((item) => { /* loops thru the items in the list making sure each one has these properties */
+          items.map((item) => { // for each item, return a nave item w/ these properties.
             return(
               <NavItem
                   path={item.path}
@@ -90,8 +91,9 @@ class SideNav extends React.Component {
 class NavItem extends React.Component {
   handleClick = () => {
     const { path, onClick } = this.props;
-    onItemClick(path);
+    onClick(path);
   }
+
   render() {
     const { active } = this.props;
     return(
