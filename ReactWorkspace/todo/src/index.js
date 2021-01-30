@@ -3,12 +3,14 @@
 // https://dribbble.com/shots/2451888-ToDo-List
 // https://medium.muz.li/todo-list-inspiration-a1d736c2718a#.4dfc4g5wp
 var todoItems = [];
-todoItems.push({ index: 1, value: "Write my todo list", done: true });
-todoItems.push({ index: 2, value: "learn react", done: false });
-todoItems.push({ index: 3, value: "learn Webpack", done: false });
-todoItems.push({ index: 4, value: "learn ES6", done: false });
-todoItems.push({ index: 5, value: "learn Routing", done: false });
-todoItems.push({ index: 6, value: "learn Redux", done: false });
+todoItems.push({ index: 1, value: "copy files from codepen", done: true });
+todoItems.push({ index: 2, value: "add dark mode toggle", done: false });
+todoItems.push({ index: 3, value: "hook up to postgres database??", done: false });
+todoItems.push({ index: 4, value: "add some user authentication", done: false });
+todoItems.push({ index: 5, value: "make a bunch of tests", done: false });
+todoItems.push({ index: 6, value: "work on styling the app", done: false });
+todoItems.push({ index: 7, value: "add cards with different lists", done: false });
+todoItems.push({ index: 8, value: "add changing list title", done: false });
 
 class TodoList extends React.Component {
   render() {
