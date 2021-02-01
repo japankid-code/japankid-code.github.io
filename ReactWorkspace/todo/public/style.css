@@ -1,9 +1,21 @@
-html {
-  --lightestColor: #EBEBEB;
-  --cookieColor: #F5DEA1;
-  --darkestColor:  #08054D;
-  --backgroundColor: #A8D8EF;
-  --packageColor: #F4C900;
+@media (prefers-color-scheme: dark) {
+  :root  { 
+    --lightestColor: #EBEBEB;
+    --cookieColor: #F5DEA1;
+    --darkestColor:  #08054D;
+    --backgroundColor: #272425;
+    --packageColor: #F4C900;
+   }
+}
+
+@media (prefers-color-scheme: light) {
+  :root { 
+    --lightestColor: #BBBCBC;
+    --cookieColor: #F5DEA1;
+    --darkestColor:  #08054D;
+    --backgroundColor: #A8D8EF;
+   --packageColor: #F4C900;
+   }
 }
 
 body {
@@ -101,6 +113,7 @@ body {
   font-size: 27px;
   box-shadow: 0 0 3px 1px var(--lightestColor);
 }
+
 .form-inline button[type=submit]:hover {
   box-shadow: 0 0 5px 4px var(--lightestColor);
 }
