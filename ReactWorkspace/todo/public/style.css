@@ -1,5 +1,21 @@
+.dark  { 
+  --lightestColor: #EBEBEB;
+  --cookieColor: #F5DEA1;
+  --darkestColor:  #08054D;
+  --backgroundColor: #272425;
+  --packageColor: #F4C900;
+ }
+
+.light { 
+  --lightestColor: #EBEBEB;
+  --cookieColor: #F5DEA1;
+  --darkestColor:  #08054D;
+  --backgroundColor: #A8D8EF;
+  --packageColor: #F4C900;
+ }
+
 @media (prefers-color-scheme: dark) {
-  .dark  { 
+  .dark { 
     --lightestColor: #EBEBEB;
     --cookieColor: #F5DEA1;
     --darkestColor:  #08054D;
@@ -14,7 +30,7 @@
     --cookieColor: #F5DEA1;
     --darkestColor:  #08054D;
     --backgroundColor: #A8D8EF;
-   --packageColor: #F4C900;
+    --packageColor: #F4C900;
    }
 }
 
