@@ -1,4 +1,4 @@
-// this was gotten here: https://kevdees.com/adding-dark-mode-toggle-to-your-website/#:~:text=To%20add%20a%20dark%20and,after%20the%20opening%20body%20tag.
+// this was gotten here: https://kevdees.com/adding-dark-mode-toggle-to-your-website/
 // A function for toggling the theme
 function toggleTheme() {
     document.body.classList.toggle("dark");
