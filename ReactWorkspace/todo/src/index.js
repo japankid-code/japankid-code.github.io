@@ -18,11 +18,9 @@ class TodoList extends React.Component {
     var items = this.props.items.map((item, index) => {
       return /*#__PURE__*/(
         React.createElement(TodoListItem, { key: index, item: item, index: index, removeItem: this.props.removeItem, markTodoDone: this.props.markTodoDone }));
-
     });
     return /*#__PURE__*/(
       React.createElement("ul", { className: "list-group" }, items));
-
   }}
 
 
@@ -48,9 +46,6 @@ class TodoListItem extends React.Component {
       React.createElement("span", { className: "glyphicon glyphicon-ok icon", onClick: this.onClickDone }),
       this.props.item.value, /*#__PURE__*/
       React.createElement("button", { type: "button", className: "close", onClick: this.onClickClose }, "\xD7"))));
-
-
-
   }}
 
 
@@ -75,8 +70,6 @@ class TodoForm extends React.Component {
       React.createElement("form", { ref: "form", onSubmit: this.onSubmit, className: "form-inline" }, /*#__PURE__*/
       React.createElement("input", { type: "text", ref: "itemName", className: "form-control", placeholder: "add a new todo..." }), /*#__PURE__*/
       React.createElement("button", { type: "submit", className: "btn btn-default" })));
-
-
   }}
 
 
@@ -84,7 +77,6 @@ class TodoHeader extends React.Component {
   render() {
     return /*#__PURE__*/(
       React.createElement("h3", { className: "title" }, "ToDo List"));
-
   }}
 
 
@@ -101,7 +93,6 @@ class TodoApp extends React.Component {
       index: todoItems.length + 1,
       value: todoItem.newItemValue,
       done: false });
-
     this.setState({ todoItems: todoItems });
   }
   removeItem(itemIndex) {
@@ -121,8 +112,6 @@ class TodoApp extends React.Component {
       React.createElement(TodoHeader, null), /*#__PURE__*/
       React.createElement(TodoForm, { addItem: this.addItem }), /*#__PURE__*/
       React.createElement(TodoList, { items: todoItems, removeItem: this.removeItem, markTodoDone: this.markTodoDone })));
-
-
   }}
 
 

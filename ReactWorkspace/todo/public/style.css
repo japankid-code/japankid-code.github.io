@@ -14,13 +14,26 @@
   --listBackgroundColor: #F4C900;
 }
 
-
+html {
+  height: 100%;
+  width: 100%;
+}
 
 body {
   font-family: 'Exo';
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   background: var(--backgroundColor);
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.themeToggler {
+  align-self: flex-end;
+  order: -1;
 }
 
 .todoForm {
@@ -29,7 +42,7 @@ body {
   max-width: 378px;
   min-width: 360px;
   min-height: 400px;
-  margin: 25px auto;
+  margin: 20px 40px 20px auto;
   border-radius: 21px;
   box-shadow: 2px 3px 8px var(--primaryAccentColor);
   background: var(--listBackgroundColor);
@@ -143,8 +156,8 @@ body {
     --backgroundColor: #111010;
     --listBackgroundColor: #383434;
    }
-   .form-inline .form-control {
-     color: var(--backgroundColor)
+  .form-inline .form-control {
+    color: var(--backgroundColor)
    }
 }
 
@@ -156,4 +169,7 @@ body {
     --backgroundColor: #A8D8EF;
     --listBackgroundColor: #F4C900;
    }
+  .form-inline .form-control {
+    color: var(--primaryAccentColor)
+  }
 }

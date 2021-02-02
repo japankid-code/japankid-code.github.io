@@ -24,5 +24,3 @@ function themeInitializer() {
         toggleTheme();
     }
 }
-
-themeInitializer();
