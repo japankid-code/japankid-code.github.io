@@ -149,27 +149,11 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark { 
+  html { 
     --secondaryAccentColor: #c8ebff;
     --listItemColor: #6C6463;
     --primaryAccentColor:  #BBBCBC;
     --backgroundColor: #111010;
     --listBackgroundColor: #383434;
    }
-  .form-inline .form-control {
-    color: var(--backgroundColor)
-   }
-}
-
-@media (prefers-color-scheme: light) {
-  .light { 
-    --secondaryAccentColor: #EBEBEB;
-    --listItemColor: #F5DEA1;
-    --primaryAccentColor:  #08054D;
-    --backgroundColor: #A8D8EF;
-    --listBackgroundColor: #F4C900;
-   }
-  .form-inline .form-control {
-    color: var(--primaryAccentColor)
-  }
 }

@@ -1,7 +1,8 @@
-// Fork from https://codepen.io/marekdano/pen/bVNYpq
-// Inspired by these pen: 
-// https://dribbble.com/shots/2451888-ToDo-List
-// https://medium.muz.li/todo-list-inspiration-a1d736c2718a#.4dfc4g5wp
+// Fork from https://codepen.io/penny1119/pen/xENWYq
+// Inspired by these pen:
+import React from 'react'
+import {ThemeContext, themes} from './theme-context';
+import ThemedButton from './themed-button';
 
 var todoItems = [];
 todoItems.push({ index: 1, value: "copy files from codepen", done: true });
@@ -114,5 +115,48 @@ class TodoApp extends React.Component {
       React.createElement(TodoList, { items: todoItems, removeItem: this.removeItem, markTodoDone: this.markTodoDone })));
   }}
 
+// An intermediate component that uses the ThemedButton
+function Toolbar(props) {
+  return (
+    <ThemedButton onClick={props.changeTheme}>
+      Change Theme
+    </ThemedButton>
+  );
+}
 
+class ThemeToggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: themes.light,
+    };
+
+    this.toggleTheme = () => {
+      this.setState(state => ({
+        theme:
+          state.theme === themes.dark
+            ? themes.light
+            : themes.dark,
+      }));
+    };
+  }
+
+  render() {
+    // The ThemedButton button inside the ThemeProvider
+    // uses the theme from state while the one outside uses
+    // the default dark theme
+    return (
+      <Page>
+        <ThemeContext.Provider value={this.state.theme}>
+          <Toolbar changeTheme={this.toggleTheme} />
+        </ThemeContext.Provider>
+        <Section>
+          <ThemedButton />
+        </Section>
+      </Page>
+    );
+  }
+}
+
+ReactDOM.render(<ThemeToggle />, document.root);
 ReactDOM.render( /*#__PURE__*/React.createElement(TodoApp, null), document.getElementById('todo'));
