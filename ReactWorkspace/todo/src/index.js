@@ -1,8 +1,8 @@
 // Fork from https://codepen.io/penny1119/pen/xENWYq
 // Inspired by these pen:
 import React from 'react'
-import {ThemeContext, themes} from './theme-context';
-import ThemedButton from './themed-button';
+import {ThemeContext, themes} from './components/theme-toggler/theme-context';
+import ThemedButton from './components/theme-toggler/themed-button';
 
 var todoItems = [];
 todoItems.push({ index: 1, value: "copy files from codepen", done: true });
@@ -22,7 +22,8 @@ class TodoList extends React.Component {
     });
     return /*#__PURE__*/(
       React.createElement("ul", { className: "list-group" }, items));
-  }}
+  }
+}
 
 
 class TodoListItem extends React.Component {
@@ -47,7 +48,8 @@ class TodoListItem extends React.Component {
       React.createElement("span", { className: "glyphicon glyphicon-ok icon", onClick: this.onClickDone }),
       this.props.item.value, /*#__PURE__*/
       React.createElement("button", { type: "button", className: "close", onClick: this.onClickClose }, "\xD7"))));
-  }}
+  }
+}
 
 
 class TodoForm extends React.Component {
@@ -71,14 +73,16 @@ class TodoForm extends React.Component {
       React.createElement("form", { ref: "form", onSubmit: this.onSubmit, className: "form-inline" }, /*#__PURE__*/
       React.createElement("input", { type: "text", ref: "itemName", className: "form-control", placeholder: "add a new todo..." }), /*#__PURE__*/
       React.createElement("button", { type: "submit", className: "btn btn-default" })));
-  }}
+  }
+}
 
 
 class TodoHeader extends React.Component {
   render() {
     return /*#__PURE__*/(
       React.createElement("h3", { className: "title" }, "ToDo List"));
-  }}
+  }
+}
 
 
 class TodoApp extends React.Component {
@@ -113,7 +117,8 @@ class TodoApp extends React.Component {
       React.createElement(TodoHeader, null), /*#__PURE__*/
       React.createElement(TodoForm, { addItem: this.addItem }), /*#__PURE__*/
       React.createElement(TodoList, { items: todoItems, removeItem: this.removeItem, markTodoDone: this.markTodoDone })));
-  }}
+  }
+}
 
 // An intermediate component that uses the ThemedButton
 function Toolbar(props) {
@@ -158,5 +163,5 @@ class ThemeToggle extends React.Component {
   }
 }
 
-ReactDOM.render(<ThemeToggle />, document.root);
 ReactDOM.render( /*#__PURE__*/React.createElement(TodoApp, null), document.getElementById('todo'));
+ReactDOM.render(<ThemeToggle />, document.root);
