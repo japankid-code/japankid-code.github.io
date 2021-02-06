@@ -124,4 +124,4 @@ class TodoApp extends React.Component {
 ThemeToggle.displayName = 'Theme Toggle'
 
 ReactDOM.render( /*#__PURE__*/React.createElement(TodoApp, null), document.getElementById('todo'));
-ReactDOM.render(<ThemeToggle />, document.getElementById('application'))
+ReactDOM.render(React.createElement(ThemeToggle, null), document.getElementById('cheese-status'))

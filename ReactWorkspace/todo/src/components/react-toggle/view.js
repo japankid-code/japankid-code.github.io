@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Toggle from 'react-toggle'
-// import '../../style.css'
 
 
 const Heart = () => (
