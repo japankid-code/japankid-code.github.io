@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { render } from 'react-dom'
 import Toggle from 'react-toggle'
 import '../../style.css'
 import './style.css'
@@ -17,7 +16,7 @@ const Heart = () => (
   </div>
 )
 
-class App extends Component {
+export class ThemeToggle extends Component {
   constructor (props) {
     super(props)
     this.handleMilkChange = this.handleMilkChange.bind(this)

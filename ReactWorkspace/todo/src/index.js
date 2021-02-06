@@ -1,6 +1,7 @@
 // Fork from https://codepen.io/penny1119/pen/xENWYq
 // Inspired by these pen:
 import React, { PureComponent } from 'react'
+import { ThemeToggle } from './components/react-toggle/view';
 
 
 var todoItems = [];
@@ -120,6 +121,7 @@ class TodoApp extends React.Component {
   }
 }
 
-
+ThemeToggle.displayName = 'Theme Toggle'
 
 ReactDOM.render( /*#__PURE__*/React.createElement(TodoApp, null), document.getElementById('todo'));
+ReactDOM.render(<ThemeToggle />, document.getElementById('application'))
