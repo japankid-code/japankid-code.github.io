@@ -12,7 +12,7 @@
 
 
 
-### some notes on the react section and what tut i followed:
+### some notes on the react section and what tut i followed for the nav bar:
 here are some links:
 [text tut](https://codeburst.io/how-to-create-a-navigation-bar-and-sidebar-using-react-348243ccd93)
 [original navbar repo](https://github.com/Shmoji/react-sidebar)
