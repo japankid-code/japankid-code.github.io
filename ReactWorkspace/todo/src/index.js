@@ -1,28 +1,30 @@
-// Fork from https://codepen.io/marekdano/pen/bVNYpq
-// Inspired by these pen: 
-// https://dribbble.com/shots/2451888-ToDo-List
-// https://medium.muz.li/todo-list-inspiration-a1d736c2718a#.4dfc4g5wp
+// Fork from https://codepen.io/penny1119/pen/xENWYq
+// Inspired by these pen:
+import React, { PureComponent } from 'react'
+import { ThemeToggle } from './components/react-toggle/view';
+
+
 var todoItems = [];
 todoItems.push({ index: 1, value: "copy files from codepen", done: true });
 todoItems.push({ index: 2, value: "add dark mode toggle", done: false });
 todoItems.push({ index: 3, value: "hook up to postgres database??", done: false });
 todoItems.push({ index: 4, value: "add some user authentication", done: false });
 todoItems.push({ index: 5, value: "make a bunch of tests", done: false });
-todoItems.push({ index: 6, value: "work on styling the app", done: false });
+todoItems.push({ index: 6, value: "work on styling the app", done: true });
 todoItems.push({ index: 7, value: "add cards with different lists", done: false });
 todoItems.push({ index: 8, value: "add changing list title", done: false });
+
 
 class TodoList extends React.Component {
   render() {
     var items = this.props.items.map((item, index) => {
       return /*#__PURE__*/(
         React.createElement(TodoListItem, { key: index, item: item, index: index, removeItem: this.props.removeItem, markTodoDone: this.props.markTodoDone }));
-
     });
     return /*#__PURE__*/(
       React.createElement("ul", { className: "list-group" }, items));
-
-  }}
+  }
+}
 
 
 class TodoListItem extends React.Component {
@@ -47,10 +49,8 @@ class TodoListItem extends React.Component {
       React.createElement("span", { className: "glyphicon glyphicon-ok icon", onClick: this.onClickDone }),
       this.props.item.value, /*#__PURE__*/
       React.createElement("button", { type: "button", className: "close", onClick: this.onClickClose }, "\xD7"))));
-
-
-
-  }}
+  }
+}
 
 
 class TodoForm extends React.Component {
@@ -74,17 +74,16 @@ class TodoForm extends React.Component {
       React.createElement("form", { ref: "form", onSubmit: this.onSubmit, className: "form-inline" }, /*#__PURE__*/
       React.createElement("input", { type: "text", ref: "itemName", className: "form-control", placeholder: "add a new todo..." }), /*#__PURE__*/
       React.createElement("button", { type: "submit", className: "btn btn-default" })));
-
-
-  }}
+  }
+}
 
 
 class TodoHeader extends React.Component {
   render() {
     return /*#__PURE__*/(
       React.createElement("h3", { className: "title" }, "ToDo List"));
-
-  }}
+  }
+}
 
 
 class TodoApp extends React.Component {
@@ -100,7 +99,6 @@ class TodoApp extends React.Component {
       index: todoItems.length + 1,
       value: todoItem.newItemValue,
       done: false });
-
     this.setState({ todoItems: todoItems });
   }
   removeItem(itemIndex) {
@@ -120,9 +118,10 @@ class TodoApp extends React.Component {
       React.createElement(TodoHeader, null), /*#__PURE__*/
       React.createElement(TodoForm, { addItem: this.addItem }), /*#__PURE__*/
       React.createElement(TodoList, { items: todoItems, removeItem: this.removeItem, markTodoDone: this.markTodoDone })));
+  }
+}
 
-
-  }}
-
+ThemeToggle.displayName = 'Theme Toggle'
 
 ReactDOM.render( /*#__PURE__*/React.createElement(TodoApp, null), document.getElementById('todo'));
+ReactDOM.render(React.createElement(ThemeToggle, null), document.getElementById('cheese-status'))
